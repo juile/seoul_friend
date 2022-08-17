@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="내친구서울 200호"/>
+	<meta name="description" content="내친구서울 200호"/>
+	<meta name="keywords" content="내친구서울 200호"/>
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="내친구서울 200호">
+	<meta property="og:description" content="내친구서울 200호">
+	<meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <title>내친구서울 200호</title>
+
+    <style>
+    /* main_pop */
+    .main_pop{position:relative; top:0;left:0;width:100%;height:100vh;overflow:hidden;z-index:9999;}
+    .main_pop .videoArea{position:fixed;top:50%;left:0;min-width:640px;width:100%; height:auto;-ms-transform:translate(0%,-50%);-webkit-transform:translate(0%,-50%);transform:translate(0%,-50%);}
+    .main_pop .videoArea video{width:100%; height:auto;}
+    .main_pop .videoArea .btn_close{position:absolute; top:19px; right:40px; z-index:9; width:45px; height:45px; background-image:url('./assets/images/main_close_btn.png');  background-position: center center; background-repeat: no-repeat;}
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- main_pop -->
+        <div class="main_pop">
+            <a href="#!" class="videoArea">
+                <button type="button" class="btn_close" id="pop_close"></button>
+                <video id="mainMovie" muted="true" autoplay loop preload="auto" data-keepplaying muted playsinline>
+                    <source src="./assets/video/video_200.mp4" type="video/mp4">
+                </video>
+            </a>
+        </div>
+    </div>
+
+    <script>
+         //팝업 닫기
+        $("#pop_close").click(function(){
+            $(".main_pop").hide();
+        });
+    </script>
+</body>
+</html>
